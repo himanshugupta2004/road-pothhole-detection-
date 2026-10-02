@@ -3,7 +3,8 @@ import { Upload, Sparkles, SlidersHorizontal, AlertTriangle, DollarSign, Shield,
 import { detectorEngine } from '../utils/detectorEngine';
 
 export function ImageDetector({ settings, setIsProcessing }) {
-  const [imageSrc, setImageSrc] = useState('/sample_pothole.jpg');
+  const sampleImage = `${import.meta.env.BASE_URL}sample_pothole.jpg`;
+  const [imageSrc, setImageSrc] = useState(sampleImage);
   const [isSample, setIsSample] = useState(true);
   const [results, setResults] = useState(null);
   const [splitPos, setSplitPos] = useState(50); // 50% split slider
@@ -59,7 +60,7 @@ export function ImageDetector({ settings, setIsProcessing }) {
   };
 
   const loadSample = () => {
-    setImageSrc('/sample_pothole.jpg');
+    setImageSrc(sampleImage);
     setIsSample(true);
   };
 
