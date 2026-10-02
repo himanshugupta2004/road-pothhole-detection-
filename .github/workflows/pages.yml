@@ -34,6 +34,7 @@ jobs:
           path: web-app/dist
 
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
