@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/road-pothhole-detection-/',
+  base: './',
   plugins: [react(), tailwindcss()],
 })
 
